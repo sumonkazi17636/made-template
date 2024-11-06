@@ -1,35 +1,44 @@
 # Project Plan
 
 ## Title
-<!-- Give your project a short title. -->
-Awesome MADE project.
+ Impact of COVID-19 on Economic Indicators in South America
 
 ## Main Question
 
-<!-- Think about one main question you want to answer based on the data. -->
-1. Does writing an example question help students write better project plans?
+How the economic impact of COVID-19 on South American countries by examining GDP, employment rates, and trade statistics?
 
 ## Description
-
-<!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-XY is an important problem, because... This projects analyzes XY, using method A. The results can give insights into...
-
+Compare pre- and post-pandemic economic metrics.
+Correlation analysis between COVID-19 cases and economic impact by country.
 ## Datasources
-
-<!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
-
-### Datasource1: ExampleSource
-* Metadata URL: https://mobilithek.info/offers/-6901989592576801458
-* Data URL: https://raw.githubusercontent.com/od-ms/radverkehr-zaehlstellen/main/100035541/2019-01.csv
+### Datasource1:
+#### URL: [https://mobilithek.info/offers/-6901989592576801458](https://data.unhabitat.org/pages/covid19citydata)
+#### Description:The COVID-19 City Data dataset by UN-Habitat offers metrics on COVID-19’s impact across 1,600+ cities, covering infection rates, healthcare access, and socioeconomic factors, supporting urban resilience research.
 * Data Type: CSV
 
-Short description of the DataSource.
 
 ## Work Packages
+#### Work Package 1: Data Gathering
+Bring in datasets
+Record dataset details and structure
+Work Package 2: Data Preparation
 
-<!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
+#### Manage missing data
+Verify data consistency and reliability
+Compile a data glossary
+Work Package 3: Initial Analysis
 
-1. Example Issue [#1][i1]
-2. ...
+#### Review water quality patterns
+Investigate environmental correlations
+Analyze seasonal fluctuations
+Work Package 4: Data Processing Pipeline
 
-[i1]: https://github.com/jvalue/made-template/issues/1
+#### Create pipeline architecture
+Configure storage solutions
+Set up automated data loading
+
+#### Work Package 5: Results and Documentation
+Document key insights
+Generate visual summaries
+Organize materials for presentations
+
