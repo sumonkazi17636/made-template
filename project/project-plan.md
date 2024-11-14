@@ -1,18 +1,21 @@
 # Project Plan
 
 ## Title
- Impact of COVID-19 on Economic Indicators in South America
+ Analysis the death ratio by specific age group during covid-19
 
 ## Main Question
 
-How the economic impact of COVID-19 on South American countries by examining GDP, employment rates, and trade statistics?
+Which age group suffered most during covid-19?
 
 ## Description
-Compare pre- and post-pandemic economic metrics.
-Correlation analysis between COVID-19 cases and economic impact by country.
+This analysis explores COVID-19 death ratios across age groups to identify which were most affected, providing insights into age-related vulnerabilities during the pandemic..
 ## Datasources
 ### Datasource1:
-#### URL: [https://mobilithek.info/offers/-6901989592576801458](https://data.unhabitat.org/pages/covid19citydata)
+#### URL: "https://data.cityofchicago.org/api/views/6irb-gasv/rows.csv?accessType=DOWNLOAD"
+#### Description:The COVID-19 City Data dataset by UN-Habitat offers metrics on COVID-19’s impact across 1,600+ cities, covering infection rates, healthcare access, and socioeconomic factors, supporting urban resilience research.
+* Data Type: CSV
+### Datasource2:
+#### URL: "https://data.cdc.gov/api/views/hk9y-quqm/rows.csv?accessType=DOWNLOAD"
 #### Description:The COVID-19 City Data dataset by UN-Habitat offers metrics on COVID-19’s impact across 1,600+ cities, covering infection rates, healthcare access, and socioeconomic factors, supporting urban resilience research.
 * Data Type: CSV
 
