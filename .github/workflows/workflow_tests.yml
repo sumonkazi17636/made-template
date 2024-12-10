@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main  # Ensures the action runs only on push to the main branch
+      
 
 jobs:
   test:
