@@ -1,0 +1,79 @@
+pipeline GTFSDataPipeline {
+
+  //Download and Extract GTFS Data
+  block DataFetcher oftype HttpExtractor {
+    url: "https://gtfs.rhoenenergie-bus.de/GTFS.zip";  
+  }
+
+  block ArchiveUnpacker oftype ArchiveInterpreter {
+    // Specify that the archive is a zip file
+    archiveType: "zip";  
+  }
+
+  //File Handling and Text Decoding
+  block PickStopFile oftype FilePicker {
+    // Pick the stops.txt file from the archive
+    path: "./stops.txt";  
+  }
+
+  block DecodeText oftype TextFileInterpreter {
+    // Decode the file in UTF-8 encoding
+    encoding: "utf8";  
+  }
+
+  block CSVParser oftype CSVInterpreter {
+     // Specify CSV delimiter (comma)
+    delimiter: ","; 
+    // Specify the enclosing character for CSV fields (double quotes)
+    enclosing: '"';   
+  }
+
+  //Define Data Types for Validation
+  valuetype CoordinateType oftype decimal {
+    constraints: [CoordinateRange];  
+  }
+
+  constraint CoordinateRange oftype RangeConstraint {
+    // Minimum latitude
+    lowerBound: -90; 
+    // Maximum latitude 
+    upperBound: 90;   
+    lowerBoundInclusive: true;
+    upperBoundInclusive: true;
+  }
+
+  valuetype ZoneType oftype integer {
+    constraints: [ValidZone];  
+  }
+
+  constraint ValidZone on integer: value == 1925;  
+
+  //Transform Data into Desired Structure
+  block DataTransformer oftype TableInterpreter {
+    header: true;  
+    columns: [
+      "stop_id" oftype integer,  
+      "stop_name" oftype text,   
+      "stop_lat" oftype CoordinateType,  
+      "stop_lon" oftype CoordinateType,  
+      "zone_id" oftype ZoneType  
+    ];  
+  }
+
+  // Output Data to SQLite Database
+  block DatabaseWriter oftype SQLiteLoader {
+    // Name of the target table in the SQLite database
+    table: "stops"; 
+     // Path to the output SQLite file 
+    file: "./gtfs.sqlite"; 
+  }
+
+  // Define the Data Flow Sequence
+  DataFetcher -> ArchiveUnpacker;
+  ArchiveUnpacker -> PickStopFile;
+  PickStopFile -> DecodeText;
+  DecodeText -> CSVParser;
+  CSVParser -> DataTransformer;
+  DataTransformer -> DatabaseWriter;
+
+}
