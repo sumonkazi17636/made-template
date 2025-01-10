@@ -1,0 +1,27 @@
+
+    ### COVID-19 Data Analysis Report
+
+    #### Objective 1: Identify Age Groups Most Affected by COVID-19
+    - The age group most affected by COVID-19 in terms of total deaths is **75-84**
+      with **6,994,508.0 deaths**.
+    - The highest death rate (normalized by mentions) is in the **85+** group
+      with a rate of **0.90 deaths per mention**.
+
+    #### Objective 2: Understand Age-Related Vulnerabilities
+    - The age group with the **highest booster dose rate** is **80+** 
+      with **50.79% coverage**.
+    - The age group with the **lowest booster dose rate** is **0-4** 
+      with **0.00% coverage**.
+    - The average booster dose rate across all age groups is **32.01%**.
+
+    #### Objective 3: Provide Data-Driven Insights for Public Health Strategies
+    1. Older populations (e.g., 65+) exhibit both the highest death rates and the highest booster coverage, highlighting the success of targeted public health interventions.
+    2. Younger populations, particularly those under 30, have lower booster coverage, leaving them more vulnerable to severe outcomes.
+    3. Public health strategies should prioritize campaigns to improve booster coverage among younger age groups while maintaining efforts to protect older populations.
+    4. Regular monitoring of trends, such as death rates and vaccination coverage, is crucial for responding to potential outbreaks and ensuring public health preparedness.
+
+    #### Recommendations:
+    1. Increase booster dose uptake among younger populations to improve immunity.
+    2. Sustain high vaccination rates among older populations to prevent resurgence in deaths.
+    3. Utilize data-driven insights to monitor and respond to public health challenges proactively.
+    
